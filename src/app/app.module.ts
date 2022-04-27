@@ -5,19 +5,19 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { SzaryComponent } from './szary/szary.component';
 import { TopbarComponent } from './topbar/topbar.component';
 
 // Material component
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { LudzieComponent } from './ludzie/ludzie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SzaryComponent,
     TopbarComponent,
+    LudzieComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,17 @@
-<h2>nazwisko: {{czlowiek.nazwisko}}</h2>
-<p>data urodzenia: {{czlowiek.data_ur | date: 'yyyy-MM-dd'}}</p>
-<p>{{czlowiek.opis}}</p>
-<img src="{{czlowiek.zdjecie}}" alt="">
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{czlowiek.nazwisko}}</mat-card-title>
+    <mat-card-subtitle>data urodzenia: {{czlowiek.data_ur | date: 'yyyy-MM-dd'}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src={{czlowiek.zdjecie}} alt={{czlowiek.nazwisko}}>
+  <mat-card-content>
+    <p>
+      {{czlowiek.opis}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

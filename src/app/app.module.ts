@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { LudzieComponent } from './ludzie/ludzie.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { LudzieComponent } from './ludzie/ludzie.component';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
+    MatCardModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,

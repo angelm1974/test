@@ -1,17 +1,28 @@
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{czlowiek.nazwisko}}</mat-card-title>
-    <mat-card-subtitle>data urodzenia: {{czlowiek.data_ur | date: 'yyyy-MM-dd'}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src={{czlowiek.zdjecie}} alt={{czlowiek.nazwisko}}>
-  <mat-card-content>
-    <p>
-      {{czlowiek.opis}}
-    </p>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+<div class="container">
+  <mat-grid-list cols="3" rowHeight="1:1.1">
+    <mat-grid-tile *ngFor="let czlowiek of moiludzie">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{czlowiek.nazwisko}}</mat-card-title>
+          <mat-card-subtitle>data urodzenia: {{czlowiek.data_ur | date: 'yyyy-MM-dd'}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src={{czlowiek.zdjecie}} width="120px" height="400px" alt={{czlowiek.nazwisko}}>
+        <mat-card-content>
+          <p>
+            {{czlowiek.opis | slice : 0 : 130}}...
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+          <mat-form-field class="example-form-field" appearance="fill">
+
+            <input matInput type="text" [(ngModel)]="czlowiek.nazwisko">
+
+          </mat-form-field>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

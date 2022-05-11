@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,19 +14,25 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { LudzieComponent } from './ludzie/ludzie.component';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatInputModule } from '@angular/material/input';
+import { CzlowiekSzczegolyComponent } from './czlowiek-szczegoly/czlowiek-szczegoly.component';
 @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
     LudzieComponent,
+    CzlowiekSzczegolyComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
+    MatGridListModule,
+    MatInputModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
